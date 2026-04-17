@@ -1,0 +1,52 @@
+site_name: shawking
+repo_url: https://github.com/adi-amatdev/shawking
+site_url: https://adi-amatdev.github.io/shawking
+site_description: Python client for the Shawking natural-language date/time parsing service.
+site_author: Aaditya Acharya
+edit_uri: edit/main/docs/
+repo_name: adi-amatdev/shawking
+copyright: Maintained by <a href="https://adi-amatdev.com">adi-amatdev</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/shawking"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/adi-amatdev/shawking
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/shawking
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
