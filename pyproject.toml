@@ -17,10 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = [
-    "ruff>=0.15.11",
-]
-
 [project.urls]
 Homepage = "https://adi-amatdev.github.io/shawking/"
 Repository = "https://github.com/adi-amatdev/shawking"
