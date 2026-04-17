@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Any
+from typing import Any, cast
 from urllib import error, request
 
 JsonResponse = dict[str, Any] | list[Any]
@@ -93,10 +93,10 @@ class ShawkingClient:
         Passing ``None`` removes an existing default for that field.
         """
         if time_zone is not _UNSET:
-            self._config.time_zone = time_zone
+            self._config.time_zone = cast("str | None", time_zone)
 
         if reference_time is not _UNSET:
-            self._config.reference_time = reference_time
+            self._config.reference_time = cast("int | datetime | None", reference_time)
 
         for key, value in options.items():
             if value is None:
@@ -135,7 +135,7 @@ class ShawkingClient:
             if reference_time is None:
                 payload.pop("referenceTime", None)
             else:
-                payload["referenceTime"] = _normalize_reference_time(reference_time)
+                payload["referenceTime"] = _normalize_reference_time(cast("int | datetime", reference_time))
 
         for key, value in overrides.items():
             if value is None:
