@@ -1,6 +1,6 @@
 # shawking
 
-`shawking` is a Python client for the Shawking Spring Boot REST service, which parses natural-language date and time expressions into structured timestamps.
+`shawking` is a Python client for the [Shawking Spring Boot REST service](https://github.com/adi-amatdev/shawking.git), which parses natural-language date and time expressions into structured timestamps.
 
 The client is class-based and keeps service connection details plus default parse options in one place. Constructor arguments configure the service IP and port, `config()` sets reusable defaults, and `parse()` can override those defaults for individual requests.
 
